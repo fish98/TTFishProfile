@@ -1,0 +1,204 @@
+baseURL: "https://example.com"
+languageCode: "en-us"
+title: "Example Name"
+theme: "TTFishProfile"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Pagination limit
+Paginate: 3
+
+# Enable emoji
+enableEmoji: true
+
+# Menus
+Menus:
+  main:
+    - identifier: about
+      name: About
+      title: About Me
+      url: /#
+      weight: 1
+    - identifier: pub
+      name: Publications
+      title: Publications
+      url: /#publications
+      weight: 2
+    - identifier: misc
+      name: Misc
+      title: Misc
+      url: /#misc
+      weight: 3
+    - identifier: awd
+      name: Awards
+      title: Awards
+      url: /#awards
+      weight: 4
+    - identifier: interest
+      name: Interests
+      title: Interest
+      url: /#interest
+      weight: 5
+    - identifier: blog
+      name: Blog
+      title: Blog Posts
+      url: /blog
+      weight: 6
+
+params:
+  title: "TTFishProfile"
+  description: Homepage of Example Name
+  favicon: /images/warai.svg
+
+  # Profile
+  profile:
+    name: "Profile"
+    namename: "Example Name"
+    image: "/images/warai.jpg"
+    bio: Hello, I am Example Name. I am a PhD student, embarking on a journey of academic exploration and research. Passionate about my field of study, I am driven to unravel the mysteries within my chosen discipline and contribute to the existing body of knowledge. I am dedicated to pursuing advanced education and seeking innovative solutions to complex problems. <br/><br/>Through rigorous inquiry, critical thinking, and collaboration with fellow researchers, I strive to make meaningful contributions to my field and society as a whole. As a PhD student, I am constantly learning, growing, and pushing the boundaries of knowledge. I am excited about the challenges and opportunities that lie ahead, and I am committed to making a positive impact through my research endeavors. Please feel free to [contact me](https://example.com).
+
+    
+    # Document
+    docs:
+      name: CV
+      link: https://example.com
+
+    # Social links
+    social:
+      email: "mailto:example@example.com"
+      github: https://github.com/fish98
+      scholar: "https://github.com/fish98"
+      # orcid
+
+  news:
+    enable: true
+    newsIntro: "As a PhD student, my research interest lies in investigating the potential of artificial intelligence (AI) to address critical environmental challenges and promote sustainable practices."
+    newsContent:
+      - "[2023.03] Website in testing."
+      - "[2023.03] Website in testing."
+      - "[2023.03] Website in testing."
+      # - "News2"
+  
+  research:
+    enable: true
+    conference: 
+      - index: 1
+        title: "[IESC'23] Integrating Deep Learning and Blockchain for Secure and Efficient Healthcare Data Sharing"
+        confname: "In Proceedings of the 45th IEEE/ACM International Conference on Software Engineering, **2023**"
+        authors: "**Example Name**, Example Name2, Example Name3, Example Name4, Example Name5"
+        image: /images/warai.svg
+        link: https://example.com
+        SI: "[[Paper]](https://example.com) ~ [[Website]](https://example.com)"
+
+    journal:
+      - index: 1
+        title: "[IESC'23] Integrating Deep Learning and Blockchain for Secure and Efficient Healthcare Data Sharing"
+        confname: "In Proceedings of the 45th IEEE/ACM International Conference on Software Engineering, **2023**"
+        authors: "**Example Name**, Example Name2, Example Name3, Example Name4, Example Name5"
+        image: /images/warai.svg
+        link: https://example.com
+        SI: "[[Paper]](https://example.com) ~ [[Website]](https://example.com)"
+
+      - index: 2
+        title: "[IESC'23] Integrating Deep Learning and Blockchain for Secure and Efficient Healthcare Data Sharing"
+        confname: "In Proceedings of the 45th IEEE/ACM International Conference on Software Engineering, **2023**"
+        authors: "**Example Name**, Example Name2, Example Name3, Example Name4, Example Name5"
+        image: /images/warai.svg
+        link: https://example.com
+        SI: "[[Paper]](https://example.com) ~ [[Website]](https://example.com)"
+  
+  awards:
+    enable: true
+    item:
+      - index: 1
+        content: "1. **5th Place**, International Example Competition, 2023"
+      - index: 2
+        content: "1. **4th Place**, International Example Competition, 2022"
+      - index: 3
+        content: "1. **3th Place**, International Example Competition, 2021"
+
+  project:
+    enable: true
+    items:
+      - projname: "Example Project 1"
+        orgname: "Example1"
+        link: "https://example.com"
+        image: "/images/warai.jpg"
+        featuredLink:
+          enable: true
+          name: "View the project"
+          url: "https://example.com"
+        content: "I thrive in dynamic and fast-paced environments, where my adaptability and problem-solving skills have been instrumental in tackling complex challenges."
+
+      - projname: "Example Project 2"
+        orgname: "Example2"
+        link: "https://example.com"
+        image: "/images/warai.svg"
+        featuredLink:
+          enable: true
+          name: "View the project"
+          url: "https://example.com"
+        content: "I thrive in dynamic and fast-paced environments, where my adaptability and problem-solving skills have been instrumental in tackling complex challenges."
+  
+  misc:
+    enable: true
+    items:
+      - projname: "Warai Otoko"
+        time: "2032.02 - 2042.03"
+        projfullname: "Example Intern 1"
+        orgname: "Management Intern"
+        link: https://example.com
+        image: "/images/warai.svg"
+        featuredLink:
+          enable: false
+          name: "View the project"
+          url: "https://example.com"
+        content: "I am a proactive and adaptable professional who thrives in fast-paced environments. I am comfortable collaborating with cross-functional teams, communicating complex ideas effectively, and managing multiple priorities."
+
+      - projname: "Intern 2"
+        projfullname: "Example Intern 2"
+        time: "2038.12 - 2055.01"
+        orgname: Mamber
+        link: https://example.com
+        image: /images/warai.jpg
+        featuredLink:
+          enable: true
+          name: Example Site
+          url: https://example.com
+        # info:
+        #   enable: true
+        #   content: I worked
+        content: |
+          I am known for my excellent interpersonal and communication skills, which have enabled me to build strong relationships with colleagues and stakeholders alike: 
+          - I value teamwork and actively contribute to creating a supportive and inclusive environment where everyone can thrive.
+          - I believe in continuous learning and staying updated with the latest industry trends and advancements, which enables me to bring innovative ideas and approaches to my work.
+
+  experience:
+    enable: true
+    item:
+      - index: 1
+        content: "* **Example Lab** <br/> Research Intern, Oct 2023 - Present <br/> Example research topic"
+      - index: 2
+        content: '* **Example University** <br/> Teaching Assistant, Oct 2011 - Oct 2012 <br/> Course "Introduction of Example Programming"'
+
+  interest:
+    enable: true
+    things:
+      - logo: /svgs/regular/angry.svg
+        name: Sleep
+        description: I am interested in sleeping <br/><br/><br/>
+
+      - logo: /svgs/regular/grin-alt.svg
+        name: Play
+        description: I am interested in playing <br/><br/><br/>
+
+      - logo: /content/Interest/friends.png
+        name: <font color=red>Promoting</font>
+        description: Here are some homepages of my friends which are worth visiting!
+        url: /friends
+
+  footer:
+    recentPosts: false
