@@ -121,7 +121,7 @@ params:
         content: "1. **3th Place**, International Example Competition, 2021"
 
   project:
-    enable: true
+    enable: false
     items:
       - projname: "Example Project 1"
         orgname: "Example1"

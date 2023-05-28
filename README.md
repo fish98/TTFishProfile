@@ -2,6 +2,8 @@
 
 A simple academic profile templete for researchers powered by Hugo.
 
+Here is the [demo site](https://ttfish-profile.netlify.app/)
+
 ## Requirements
 
 + hugo v0.111.3+extended
