@@ -1,0 +1,33 @@
+<div class="text-center">
+    {{ if .Site.Params.profile.docs.link }}
+    <span class="px-1">
+    <a href={{ .Site.Params.profile.docs.link }} class="btn btn-outline-danger" role="button"
+        aria-pressed="true">
+        {{ .Site.Params.profile.docs.name | default "CV" }}
+    </a>
+    </span>
+    {{ end }}
+
+    {{ if .Site.Params.profile.social.email }}
+    <span class="px-1">
+        <a style="color: white" href="{{ .Site.Params.profile.social.email }}" aria-label="email">
+            <img src="svgs/email.svg" width="64px" height="64px" />
+        </a>
+    </span>
+    {{ end }}
+    {{ if .Site.Params.profile.social.github }}
+    <span class="px-1" >
+        <!-- Fix a dame bug -->
+        <a style="color: white" href="{{ .Site.Params.profile.social.github }}" aria-label="github">
+            <img src="svgs/github.svg" width="64px" height="64px" />
+        </a>
+    </span>
+    {{ end }}
+    {{ if .Site.Params.profile.social.scholar }}
+    <span class="px-1">
+        <a style="color: white" href="{{ .Site.Params.profile.social.scholar }}" aria-label="google scholar">
+            <img src="svgs/scholar.svg" width="64px" height="64px" />
+        </a>
+    </span>
+    {{ end }}
+</div>

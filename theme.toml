@@ -1,0 +1,11 @@
+name = "TTFishProfile"
+license = "MIT"
+licenselink = "https://github.com/fish98/TTFishProfile/blob/main/LICENSE"
+description = "A simple academic homepage powered by Hugo"
+homepage = "https://github.com/fish98/TTFishProfile"
+tags = ["Scholar", "Portfolio", "Personal"]
+min_version = "0.1.1"
+
+[author]
+  name = "ttfish"
+  homepage = "https://github.com/fish98"

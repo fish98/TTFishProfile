@@ -1,0 +1,61 @@
+<div class="profile pt-4">
+    <div class="container">
+        <div class="row justify-content-center py-2">
+            <div class="col pt-2 text-center">
+                <!-- Profile Image -->
+                {{ if .Site.Params.profile.image }}
+                <img src="{{ .Site.Params.profile.image }}" width="350" height="460" alt="{{ .Site.Params.name }}"
+                    class="rounded fishrounded">
+                {{ end }}
+                <div style="height: 50px"></div>
+                {{- partial "sections/home/profile/social.html" . -}}
+            </div>
+            <div class="col col-lg-7">
+                <!-- Bio -->
+                {{- partial "sections/home/profile/bio.html" . -}}
+            </div>
+        </div>
+
+        {{ if .Site.Params.news.enable }}
+        <!-- sepereate line -->
+        <hr class="simple" color="#6f5499" style="height:2px"/>
+        <!-- News -->
+        {{- partial "sections/home/profile/news.html" . -}}
+        {{ end }}
+
+        <!-- sepereate line -->
+        <hr class="simple" color="#6f5499" style="height:2px"/>
+
+        <!-- Research -->
+        {{- partial "sections/home/profile/research.html" . -}}
+
+        {{ if .Site.Params.project.enable | default false }}
+        <hr class="simple" color="#6f5499" style="height:2px"/>
+        <!-- Projects -->
+        {{- partial "sections/home/profile/project.html" . -}}
+        {{ end }}
+
+        {{ if .Site.Params.experience.enable | default false }}
+        <hr class="simple" color="#6f5499" style="height:2px"/>
+        <!-- Experience -->
+        {{- partial "sections/home/profile/experience.html" . -}}
+        {{ end }}
+
+        {{ if .Site.Params.misc.enable | default false }}
+        <hr class="simple" color="#6f5499" style="height:2px"/>
+        <!-- Misc -->
+        {{- partial "sections/home/profile/misc.html" . -}}
+        {{ end }}
+
+        {{ if .Site.Params.awards.enable | default false }}
+        <hr class="simple" color="#6f5499" style="height:2px"/>        
+        <!-- Awards -->
+        {{- partial "sections/home/profile/awards.html" . -}}
+        {{ end }}
+
+        <hr class="simple" color="#6f5499" style="height:2px"/>
+
+        <!-- Interest -->
+        {{- partial "sections/home/profile/interest.html" . -}}
+    </div>
+</div>

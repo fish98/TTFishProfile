@@ -1,0 +1,31 @@
+{{ if .Site.Params.experience.enable | default false }}
+<section id="experience">
+    <div class="container">
+        <h3 class="text-center">Experience</h3>
+        <div class="row justify-content-center">
+            {{ $indexMenu := .Site.Params.experience.index }}
+            {{ range $index, $element := .Site.Params.experience.item }}
+            <div class="p-0">
+                <div class="row row align-items-center justify-content-center m-1">
+                    {{ if $indexMenu }}
+                    <div class="col-md-1 text-center me-2 p-0 d-none d-md-block">
+                        <div class="py-0">
+                            <span class="index shadow-lg">
+                                {{ add $index 1 }}
+                            </span>
+                        </div>
+                    </div>
+                    {{ end }}
+
+                    <div class="px-0">
+                        <div class="py-0 education-content">
+                            {{ .content | markdownify}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

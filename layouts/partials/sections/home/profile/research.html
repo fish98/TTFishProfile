@@ -1,0 +1,102 @@
+{{ if .Site.Params.research.enable | default false }}
+<section id="research" class="py-2">
+    <div class="container">
+        <h3 class="text-center" id="publications">Publications</h3>
+
+        <h5> Conference Papers</h5>
+        <div class="row justify-content-center py-2">
+            {{ $indexMenu := .Site.Params.research.index }}
+            {{ range $index, $element := .Site.Params.research.conference }}
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1">
+                    {{ if $indexMenu }}
+                    <div class="col-md-1 text-center me-2 p-0 d-none d-md-block">
+                        <div class="py-2">
+                            <span class="index shadow-lg">
+                                {{ add $index 1 }}
+                            </span>
+                        </div>
+                    </div>
+                    {{ end }}
+
+            <div class="px-0">
+                <div class="card">
+                    <div class="card-body row justify-content-center">
+                        <div class="col-3 text-center">
+                        {{ if .image }}
+                        <a id="nothing" href={{ .link | default "#" }} target="_blank" class="text-decoration-none">
+                            <img src="{{ .image }}" width="100%" alt="Not Found">
+                        </a>
+                        {{ end }}
+                        </div>
+                        <div class="col">
+                            <a id="nothing" href={{ .link | default "#" }} target="_blank" class="text-decoration-none"><b>
+                                {{ .title | markdownify}}
+                            </b></a>
+                            <div>
+                                {{ .authors | markdownify}}
+                            </div>
+                            <i>
+                                {{ .confname | markdownify}}
+                            </i>
+                            <div>
+                                {{ .SI | markdownify}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+        <div style="height: 20px"></div>
+        
+        <h5> Journal Papers</h5>
+        <div class="row justify-content-center py-2">
+            {{ $indexMenu := .Site.Params.research.index }}
+            {{ range $index, $element := .Site.Params.research.journal }}
+            <div class="col-12 p-0">
+                <div class="row row align-items-center justify-content-center m-1">
+                    {{ if $indexMenu }}
+                    <div class="col-md-1 text-center me-2 p-0 d-none d-md-block">
+                        <div class="py-2">
+                            <span class="index shadow-lg">
+                                {{ add $index 1 }}
+                            </span>
+                        </div>
+                    </div>
+                    {{ end }}
+
+            <div class="px-0">
+                <div class="card">
+                    <div class="card-body row justify-content-center">
+                        <div class="col-3 text-center">
+                        {{ if .image }}
+                        <a id="nothing" href={{ .link | default "#" }} target="_blank" class="text-decoration-none">
+                            <img src="{{ .image }}" width="100%" alt="Not Found">
+                        </a>
+                        {{ end }}
+                        </div>
+                        <div class="col">
+                            <a id="nothing" href={{ .link | default "#" }} target="_blank" class="text-decoration-none"><b>
+                                {{ .title | markdownify}}
+                            </b></a>
+                            <div>
+                                {{ .authors | markdownify}}
+                            </div>
+                            <i>
+                                {{ .jorname | markdownify}}
+                            </i>
+                            <div>
+                                {{ .SI | markdownify}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+        
+        </div>
+    </div>
+</section>
+{{ end }}

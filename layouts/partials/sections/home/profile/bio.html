@@ -1,0 +1,12 @@
+<div class="row justify-content-center ">
+    <div class="col-md-12">
+        <h1 class="bio-name text-center text-dark font-weight-bold">
+            {{ .Site.Params.profile.namename | default "UserName" }}
+        </h1>
+        <div class="bio-content text-dark text-extra-light p-3">
+            {{ .Site.Params.profile.bio | markdownify }}
+        </div>
+        <div class="social px-3 text-center pb-4">
+        </div>
+    </div>
+</div>

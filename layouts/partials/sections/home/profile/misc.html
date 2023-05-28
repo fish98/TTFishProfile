@@ -1,0 +1,122 @@
+<section id="misc" class="py-2">
+    <div class="container">
+        <h3 class="text-center">Misc</h3>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-12 col-lg-12 py-2">
+                <div class="experience-container px-3 pt-2">
+                    <ul class="nav nav-pills mb-3 bg-transparent" id="pills-tab" role="tablist">
+                        {{ range $index, $element := .Site.Params.misc.items }}
+                        {{ if (eq $index 0) }}
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <h4
+                                class="nav-link active bg-transparent select-nav" 
+                                aria-selected="true" 
+                                type="button"
+                                role="tab" 
+                                data-bs-toggle="pill"
+                                id='{{ replace .orgname " " "-" }}-tab'
+                                data-bs-target='#pills-{{ replace .orgname " " "-" }}'
+                                aria-controls='{{ replace .orgname " " "-" }}' 
+                            >
+                                {{ .projname }}
+                        </h4>
+                        </li>
+                        {{ else }}
+                        <li class="nav-item px-1 bg-transparent" role="presentation">
+                            <h4 
+                                class="nav-link bg-transparent" 
+                                aria-selected="true" 
+                                type="button"
+                                role="tab" 
+                                data-bs-toggle="pill"
+                                id='{{ replace .orgname " " "-" }}-tab'
+                                data-bs-target='#pills-{{ replace .orgname " " "-" }}' 
+                                aria-controls='{{ replace .orgname " " "-" }}'
+                            >
+                                {{ .projname }}
+                            </h4>
+                        </li>
+                        {{ end }}
+                        {{ end }}
+                    </ul>
+                    <div class="tab-content pb-1 pt-2 bg-transparent primary-font" id="pills-tabContent">
+                        {{ range $index, $element := .Site.Params.misc.items }}
+                        {{ if (eq $index 0) }}
+                        <div 
+                            class="tab-pane fade show active bg-transparent" 
+                            role="tabpanel"
+                            id='pills-{{ replace .orgname " " "-" }}'
+                            aria-labelledby='pills-{{ replace .orgname " " "-" }}-tab'
+                        >   
+                            <div class="row justify-content-center">
+                                <div class="col-3 py-2 text-center">
+                                    {{ if .image }}
+                                    <a id="nothing" href={{ .link | default "#" }} target="_blank" class="text-decoration-none">
+                                        <img src="{{ .image }}" width="100%" alt="Not Found">
+                                    </a>
+                                    {{ end }}
+                                </div>
+                                <div class="col-1"></div>
+                                <div class="col">
+                                    <span class="h4">{{ .projfullname }}</span>
+                                    <div class="py-1">
+                                    <div>{{ .time }}</div>
+                                    <div>{{ .orgname | markdownify }}</div>
+                                    </div>
+                                    {{ if .featuredLink.enable | default false }}
+                                    <div class="py-2 featuredLink">
+                                        <a class="p-2 px-4 btn btn-outline-primary btn-sm" href={{ .featuredLink.url | default "#" }} target="_blank">
+                                            {{ .featuredLink.name | default "Featured Link" }} 
+                                        </a>
+                                    </div>
+                                    {{ end }}
+
+
+                            {{ .content | markdownify}}
+                                </div>
+                            </div>
+                        </div>
+                        {{ else }}
+                        <div 
+                            class="tab-pane fade bg-transparent" 
+                            role="tabpanel"
+                            id='pills-{{ replace .orgname " " "-" }}'
+                            aria-labelledby='pills-{{ replace .orgname " " "-" }}-tab'
+                        >
+                        <div class="row justify-content-center">
+                            <div class="col-3 py-2 text-center">
+                                {{ if .image }}
+                                <a id="nothing" href={{ .link | default "#" }} target="_blank" class="text-decoration-none">
+                                    <img src="{{ .image }}" width="100%" alt="Not Found">
+                                </a>
+                                {{ end }}
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col">
+                                <span class="h4">{{ .projfullname }}</span>
+                                <div class="py-1">
+                                    <div>{{ .time }}</div>
+                                    <div>{{ .orgname | markdownify }}</div>
+                                    </div>
+                                
+                                {{ if .featuredLink.enable | default false }}
+                                <div class="py-2 featuredLink">
+                                    <a class="p-2 px-4 btn btn-outline-primary btn-sm" href={{ .featuredLink.url | default "#" }} target="_blank">
+                                        {{ .featuredLink.name | default "Featured Link" }} 
+                                    </a>
+                                </div>
+                                {{ end }}
+                            <div class="pt-2">
+                                {{ .content | markdownify}}
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
