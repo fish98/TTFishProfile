@@ -18,10 +18,13 @@ Visit [offical documentation of hugo](https://gohugo.io/getting-started/quick-st
 
 ```bash 
 # Init a hugo project
-hugo new site blabla -f=yaml
+hugo new site blabla --format=yaml
 
 # Clone TTFishProfile into the themes dir
 git clone https://github.com/fish98/TTFishProfile.git themes/TTFishProfile
+
+# Remember to replace the default hugo.yaml
+rm hugo.yaml
 
 # Use the template config.yaml
 cp -r themes/TTFishProfile/exampleSite/* .
