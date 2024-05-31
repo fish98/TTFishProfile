@@ -6,10 +6,10 @@ Here is the [demo site](https://ttfish-profile.netlify.app/)
 
 ## Requirements
 
-+ hugo v0.111.3+extended
+The code works properly on **hugo v0.126.1+extended**
 
 ```bash
-pacman -S hugo #(e.g.)
+pacman -S hugo #(e.g. for Arch Linux)
 ```
 
 Visit [offical documentation of hugo](https://gohugo.io/getting-started/quick-start/) for installation
